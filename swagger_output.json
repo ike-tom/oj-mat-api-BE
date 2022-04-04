@@ -1,0 +1,94 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Oj-Mat-API",
+    "description": "This is a OpenAPI interactive documentation for Oj-Mat-API - the database of characters from Father Mathew series.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api"
+    }
+  ],
+  "paths": {
+    "/people": {
+      "get": {
+        "tags": ["people"],
+        "summary": "List of all characters from the series",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Person"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BAD REQUEST",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/people/{id}": {
+      "get": {
+        "tags": ["people"],
+        "summary": "Details of specified person",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Person"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BAD REQUEST",
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Person": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "job": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
