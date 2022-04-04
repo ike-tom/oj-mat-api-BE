@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3000/api"
+      "url": "https://oj-mat-api.herokuapp.com/api"
     }
   ],
   "paths": {
