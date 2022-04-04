@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js",    
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,12 +14,15 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mongoose": "^6.2.9",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "swagger-jsdoc": "^6.2.0",
+    "swagger-ui-express": "^4.3.0"
   },
   "devDependencies": {
     "eslint": "^8.12.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "swagger-autogen": "^2.20.8"
   }
 }
