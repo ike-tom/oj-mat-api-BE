@@ -12,6 +12,9 @@ const personSchema = new mongoose.Schema(
     gender: {
       required: true,
       type: String
+    },
+    job: {
+      type: String
     }
   },
   { _id: false }
