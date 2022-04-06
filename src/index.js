@@ -1,6 +1,6 @@
 require('dotenv').config();
 const routes = require('./routes/people.routes');
-
+const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
 const mongoString = process.env.DATABASE_URL;
@@ -29,6 +29,8 @@ database.once('connected', () => {
   console.log('Database Connected');
 });
 const app = express();
+
+app.use(cors());
 app.use('/api/doc', swaggerUI.serve, swaggerUI.setup(swaggerFile, options));
 
 app.use(express.json());
