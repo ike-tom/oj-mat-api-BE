@@ -19,7 +19,7 @@ router.get('/people', async (req, res) => {
 router.get('/people/:id', async (req, res) => {
   try {
     const data = await Person.findById(req.params.id);
-    if (data === null) res.json('Character with this id does not exists.');
+    if (data === null) res.json('A character with this id does not exist.');
     res.json(data);
   } catch (error) {
     res.status(error.status || 500).send({
