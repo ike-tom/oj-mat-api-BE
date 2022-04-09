@@ -36,6 +36,13 @@ app.use('/api/doc', swaggerUI.serve, swaggerUI.setup(swaggerFile, options));
 app.use(express.json());
 app.use('/api', routes);
 
+app.use((req, res, next) => {
+  res.status(404).send({
+    status: 404,
+    error: 'Not found'
+  });
+});
+
 app.listen(process.env.PORT || 4000, () => {
   console.log(`Server Started at ${process.env.PORT}`);
 });
