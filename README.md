@@ -17,4 +17,4 @@ Check out my great API! Now you can download all data from your favorite TV seri
 - Git
 - Visual Studio Code
 
-## IV. [Swagger](https://oj-mat-api.herokuapp.com/api/doc/#/)
+## IV. [Swagger](https://oj-mat-api-be.onrender.com/api/doc/#/)
